@@ -8,5 +8,27 @@
 
 
 '''CREATE TABLE  graduates(ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL UNIQUE, Age INTEGER , Gender TEXT, Points INTEGER, graduation TEXT );'''
-'''INSERT INTO graduates (ID,name,Age,Gender,Points,graduation) VALUES("4","Layal","18","F","350","08/09/2018")''' --Answer-11 and 10
+
+'''INSERT INTO graduated (name,Age,Gender,Points) SELECT name,Age,gender,Points FROM students WHERE name="Layal";''' --Answer-10
+
+'''UPDATE graduated SET Graduation= "08/09/2018" WHERE name="Layal";''' --Answer-11
+
+
 '''DELETE  FROM students WHERE name="Layal"''' --Answer-12
+
+
+
+'''SELECT employees.Name, employees.Company, companies.Date
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company;''' --Answer-14
+
+
+'''SELECT employees.name FROM employees INNER JOIN companies ON employees.Company=companies.Name WHERE companies.Date>2000;''' --Answer-15
+
+'''SELECT companies.name FROM employees INNER JOIN companies ON employees.Company=companies.Name WHERE employees.Role= "Graphic Designer";''' --Answer-16
+
+
+
+
+
+
