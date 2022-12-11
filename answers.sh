@@ -13,15 +13,13 @@
 
 '''UPDATE graduated SET Graduation= "08/09/2018" WHERE name="Layal";''' --Answer-11
 
-
-'''DELETE  FROM students WHERE name="Layal"''' --Answer-12
+'''DELETE  FROM students WHERE name="Layal";''' --Answer-12
 
 
 
 '''SELECT employees.Name, employees.Company, companies.Date
 FROM employees
 INNER JOIN companies ON companies.Name = employees.Company;''' --Answer-14
-
 
 '''SELECT employees.name FROM employees INNER JOIN companies ON employees.Company=companies.Name WHERE companies.Date>2000;''' --Answer-15
 
@@ -31,4 +29,13 @@ INNER JOIN companies ON companies.Name = employees.Company;''' --Answer-14
 
 
 
+''' SELECT students.Name from students WHERE Points=( SELECT max(Points)FROM students);''' --Answer-18
+
+'''SELECT avg(points) FROM students;''' --Answer-19
+
+'''SELECT count(name) FROM students WHERE students.Points="500";''' --Answer-20
+
+'''SELECT students.name FROM students WHERE name like "%s%";''' --Answer-21
+
+'''SELECT * FROM students ORDER by Points DESC;''' --Answer-22
 
